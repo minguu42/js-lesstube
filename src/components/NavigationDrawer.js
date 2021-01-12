@@ -12,6 +12,13 @@ const NavigationDrawer = () => {
             <div className="navigation-drawer__inner">
                 <div className="nd-card">
                     <img src="http://placehold.jp/240x136.png" alt="ダミー画像"/>
+                    <p className="nd-card__heading">動画タイトル</p>
+                    <button className="nd-card__button">削除</button>
+                </div>
+                <div className="nd-card">
+                    <img src="http://placehold.jp/240x136.png" alt="ダミー画像"/>
+                    <p className="nd-card__heading">動画タイトル</p>
+                    <button className="nd-card__button">削除</button>
                 </div>
             </div>
         </div>

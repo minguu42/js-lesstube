@@ -18,5 +18,22 @@
 
 .navigation-drawer__inner {
     width: 240px;
-    margin: 16px auto 0;
+    margin: 0 auto;
+}
+
+.nd-card {
+    margin-top: 16px;
+    border: solid 1px var(--border-color);
+}
+
+.nd-card__heading {
+    margin-left: 4px;
+}
+
+.nd-card__button {
+    border: solid 1px red;
+    border-radius: 10%;
+    margin: 8px 0 8px 4px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
