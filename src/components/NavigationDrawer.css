@@ -1,0 +1,22 @@
+.navigation-drawer {
+    width: 256px;
+    border-right: solid 1px var(--border-color);
+}
+
+.navigation-drawer__header {
+    height: 56px;
+    border-bottom: solid 1px var(--border-color);
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 56px;
+}
+
+.nd-header__text {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.navigation-drawer__inner {
+    width: 240px;
+    margin: 16px auto 0;
+}

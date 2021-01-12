@@ -1,4 +1,5 @@
 :root {
   --primary-color: #03A9F4;
   --on-primary-color: #fff;
+  --border-color: rgba(0, 0, 0, 0.12);
 }
