@@ -1,0 +1,16 @@
+.header {
+    height: 56px;
+    background-color: var(--primary-color);
+    display: flex;
+}
+
+.header__menu {
+    margin: auto 16px;
+    color: var(--on-primary-color);
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    line-height: 54px;
+    color: var(--on-primary-color);
+}
