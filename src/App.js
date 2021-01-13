@@ -7,6 +7,7 @@ import SearchForm from "./components/SearchForm";
 import VideoFlame from "./components/VideoFlame";
 
 import './App.css';
+import ThankYouPage from "./components/ThankYouPage";
 
 const App = () => {
     return (
@@ -23,7 +24,7 @@ const App = () => {
                         <VideoFlame/>
                     </Route>
                     <Route path="/thank">
-                        <h2>ThankYouページ</h2>
+                        <ThankYouPage/>
                     </Route>
                     <Redirect push to="/"/>
                 </Switch>

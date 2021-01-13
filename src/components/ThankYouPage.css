@@ -1,0 +1,8 @@
+.thank-you-page {
+    height: calc(100vh - 56px);
+}
+
+.thank-you-page__heading {
+    margin-top: 56px;
+    text-align: center;
+}
