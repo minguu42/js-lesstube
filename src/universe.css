@@ -1,6 +1,8 @@
 :root {
   --primary-color: #00BCD4;
   --on-primary-color: #fff;
+  --secondary-color: #00ACC1;
+  --on-secondary-color: #fff;
   --accent-color: #FDD835;
   --error-color: #F44336;
   --border-color: rgba(0, 0, 0, 0.12);
