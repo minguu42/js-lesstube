@@ -1,8 +1,3 @@
-/*SearchBarコンポーネントの場所を確保している。作成後削除する*/
-.dev-back-c {
-    margin-top: 72px;
-}
-
 .video-list {
     display: grid;
     grid-template-rows: 304px;

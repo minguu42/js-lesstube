@@ -3,6 +3,7 @@ import NavigationDrawer from "./components/NavigationDrawer";
 import VideoList from "./components/VideoList";
 
 import './App.css';
+import SearchForm from "./components/SearchForm";
 
 const App = () => {
     return (
@@ -10,6 +11,7 @@ const App = () => {
             <NavigationDrawer/>
             <div className="main">
                 <AppBar/>
+                <SearchForm/>
                 <VideoList/>
             </div>
         </div>
