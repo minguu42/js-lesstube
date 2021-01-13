@@ -1,6 +1,5 @@
 .video-list {
     display: grid;
-    grid-template-rows: 304px;
     grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
 }
 

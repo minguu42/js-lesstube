@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {Redirect, Route, Switch} from "react-router";
 
 import {fetchYouTubeVideos} from './api';
@@ -13,10 +13,12 @@ import ThankYouPage from "./components/ThankYouPage";
 import './App.css';
 
 const App = () => {
+    const [videos, setVideos] = useState(null);
+    // const [nowWatchVideos, setNowWatchVideos] = useState([]);
 
     useEffect(() => {
         fetchYouTubeVideos('sample').then((data) => {
-            console.log(data.items);
+            setVideos(data.items);
         });
     }, []);
 
@@ -28,7 +30,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <SearchForm/>
-                        <VideoList/>
+                        <VideoList videos={videos}/>
                     </Route>
                     <Route path="/watch">
                         <VideoFlame/>
