@@ -13,14 +13,20 @@ import ThankYouPage from "./components/ThankYouPage";
 import './App.css';
 
 const App = () => {
-    const [videos, setVideos] = useState(null);
+    const [videos, setVideos] = useState([]);
     // const [nowWatchVideos, setNowWatchVideos] = useState([]);
 
     useEffect(() => {
-        fetchYouTubeVideos('sample').then((data) => {
+        fetchYouTubeVideos('ヒカキン').then((data) => {
             setVideos(data.items);
         });
     }, []);
+
+    const reloadVideos = (keyword) => {
+        fetchYouTubeVideos(keyword).then((data) => {
+            setVideos(data.items);
+        });
+    };
 
     return (
         <div className="app">
@@ -29,7 +35,7 @@ const App = () => {
                 <AppBar/>
                 <Switch>
                     <Route exact path="/">
-                        <SearchForm/>
+                        <SearchForm onFormSubmit={reloadVideos}/>
                         <VideoList videos={videos}/>
                     </Route>
                     <Route path="/watch">
