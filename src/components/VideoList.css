@@ -1,0 +1,33 @@
+/*SearchBarコンポーネントの場所を確保している。作成後削除する*/
+.dev-back-c {
+    margin-top: 72px;
+}
+
+.video-list {
+    display: grid;
+    grid-template-rows: 304px;
+    grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
+}
+
+.video-card {
+    width: 332px;
+    margin: 16px auto 0;
+    padding-bottom: 16px;
+}
+
+.video-card__title {
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.video-card__description {
+    margin-top: 4px;
+    margin-left: 12px;
+}
+
+.video-card__button {
+    border: solid 1px var(--accent-color);
+    margin-top: 8px;
+    margin-left: 12px;
+    padding: 0 4px;
+}
