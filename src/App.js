@@ -1,10 +1,12 @@
 import AppBar from './components/AppBar';
+import {Redirect, Route, Switch} from "react-router";
+
 import NavigationDrawer from "./components/NavigationDrawer";
 import VideoList from "./components/VideoList";
+import SearchForm from "./components/SearchForm";
+import VideoFlame from "./components/VideoFlame";
 
 import './App.css';
-import SearchForm from "./components/SearchForm";
-import {Redirect, Route, Switch} from "react-router";
 
 const App = () => {
     return (
@@ -18,7 +20,7 @@ const App = () => {
                         <VideoList/>
                     </Route>
                     <Route path="/watch">
-                        <h2>動画再生ページ</h2>
+                        <VideoFlame/>
                     </Route>
                     <Route path="/thank">
                         <h2>ThankYouページ</h2>
