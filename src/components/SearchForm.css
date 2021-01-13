@@ -1,6 +1,7 @@
 .form__outer {
     margin-top: 16px;
-    height: 56px;
+    margin-bottom: 8px;
+    height: 40px;
 }
 
 .form {
