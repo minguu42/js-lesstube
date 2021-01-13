@@ -1,5 +1,7 @@
 :root {
-  --primary-color: #03A9F4;
+  --primary-color: #00BCD4;
   --on-primary-color: #fff;
+  --accent-color: #FDD835;
+  --error-color: #F44336;
   --border-color: rgba(0, 0, 0, 0.12);
 }

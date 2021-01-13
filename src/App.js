@@ -1,5 +1,6 @@
 import AppBar from './components/AppBar';
 import NavigationDrawer from "./components/NavigationDrawer";
+import VideoList from "./components/VideoList";
 
 import './App.css';
 
@@ -9,7 +10,7 @@ const App = () => {
             <NavigationDrawer/>
             <div className="main">
                 <AppBar/>
-                <h1>Hello, React!</h1>
+                <VideoList/>
             </div>
         </div>
     );
