@@ -3,6 +3,11 @@ import './VideoList.css';
 const VideoList = (props) => {
     const videos = props.videos;
 
+    const handleClick = (event) => {
+        event.preventDefault();
+        props.onVideoCardClick(event.target.value);
+    };
+
     if (!videos.length) {
         return (
             <div className="dev-back-c video-list">
@@ -23,7 +28,14 @@ const VideoList = (props) => {
                         />
                         <h4 className="video-card__title">{video.snippet.title}</h4>
                         <p className="video-card__channel-title">{video.snippet.channelTitle}</p>
-                        <button className="video-card__button">今から見る</button>
+                        <button
+                            className="video-card__button"
+                            onClick={handleClick}
+                            name="button"
+                            value={video}
+                        >
+                            今から見る
+                        </button>
                     </div>
                 );
             })}

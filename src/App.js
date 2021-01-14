@@ -28,6 +28,13 @@ const App = () => {
         });
     };
 
+    const addNowWatchVideos = (video) => {
+        const tmp = nowWatchVideos.slice();
+        tmp.push(video);
+        setNowWatchVideos(tmp);
+        console.log(nowWatchVideos);
+    };
+
     return (
         <div className="app">
             <NavigationDrawer nowWatchVideos={nowWatchVideos}/>
@@ -36,7 +43,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <SearchForm onFormSubmit={reloadVideos}/>
-                        <VideoList videos={videos}/>
+                        <VideoList videos={videos} onVideoCardClick={addNowWatchVideos}/>
                     </Route>
                     <Route path="/watch">
                         <VideoFlame/>

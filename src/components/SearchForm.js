@@ -6,7 +6,7 @@ const SearchForm = (props) => {
         e.preventDefault();
         const {keyword} = e.target.elements;
         props.onFormSubmit(keyword.value);
-    }
+    };
 
     return (
         <div className="form__outer">
