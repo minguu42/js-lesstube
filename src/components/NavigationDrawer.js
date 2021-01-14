@@ -1,6 +1,7 @@
 import {MdVideoLabel} from 'react-icons/md';
 import '../universe.css';
 import './NavigationDrawer.css';
+import {Link} from "react-router-dom";
 
 const NavigationDrawer = (props) => {
     const nowWatchVideos = props.nowWatchVideos;
@@ -44,6 +45,7 @@ const NavigationDrawer = (props) => {
                         </div>
                     );
                 })}
+                <Link to="/watch" className="navigation-drawer__now-watch-button">見始める</Link>
             </div>
         </div>
     );
