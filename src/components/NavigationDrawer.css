@@ -21,6 +21,22 @@
     margin: 0 auto;
 }
 
+.navigation-drawer__message {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.navigation-drawer__now-watch-button {
+    background-color: var(--primary-color);
+    border-radius: 10%;
+    display: inline-block;
+    padding: 4px 16px;
+    margin: 8px 0 0 64px;
+    color: var(--on-primary-color);
+    text-decoration: none;
+}
+
 .nd-card {
     margin-top: 16px;
     border: solid 1px var(--border-color);
@@ -28,6 +44,7 @@
 
 .nd-card__heading {
     margin-left: 4px;
+    font-size: 0.8rem;
 }
 
 .nd-card__button {

@@ -1,6 +1,5 @@
 .video-list {
     display: grid;
-    grid-template-rows: 304px;
     grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
 }
 
@@ -15,7 +14,7 @@
     margin-left: 12px;
 }
 
-.video-card__description {
+.video-card__channel-title {
     margin-top: 4px;
     margin-left: 12px;
 }
