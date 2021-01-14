@@ -54,7 +54,7 @@ const App = () => {
                         <VideoList videos={videos} onVideoCardClick={handleVideoCardClick}/>
                     </Route>
                     <Route path="/watch">
-                        <VideoFlame/>
+                        <VideoFlame nowWatchVideos={nowWatchVideos}/>
                     </Route>
                     <Route path="/thank">
                         <ThankYouPage/>

@@ -1,6 +1,26 @@
+import {useState} from 'react';
+import {Redirect} from "react-router";
+
 import './VideoFlame.css';
 
-const VideoFlame = () => {
+const VideoFlame = (props) => {
+    const nowWatchVideos = props.nowWatchVideos;
+    const [nowVideos, setNowVideos] = useState(nowWatchVideos);
+
+    const onEnd = () => {
+        const tmp = nowVideos.slice();
+        tmp.splice(0, 1);
+        setNowVideos(tmp);
+    };
+
+    if (!nowVideos.length) {
+        return (
+            <Redirect to="/thank"/>
+        );
+    }
+
+    const nowVideo = nowVideos[0];
+    console.log(nowVideo);
     return (
         <div className="video-flame__outer">
             <iframe
@@ -12,7 +32,7 @@ const VideoFlame = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
             />
-            <h2 className="video-flame__title">動画タイトル</h2>
+            <h2 className="video-flame__title">{nowVideo.snippet.title}</h2>
         </div>
     );
 };

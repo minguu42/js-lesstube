@@ -45,7 +45,7 @@ const NavigationDrawer = (props) => {
                         </div>
                     );
                 })}
-                <Link to="/watch" className="navigation-drawer__now-watch-button">見始める</Link>
+                <Link to="/watch" className="navigation-drawer__now-watch-button">見る</Link>
             </div>
         </div>
     );
