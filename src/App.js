@@ -34,9 +34,18 @@ const App = () => {
         setNowWatchVideos(tmp);
     };
 
+    const handleNowWatchCardDeleteClick = (index) => {
+        const tmp = nowWatchVideos.slice();
+        tmp.splice(index, 1);
+        setNowWatchVideos(tmp);
+    };
+
     return (
         <div className="app">
-            <NavigationDrawer nowWatchVideos={nowWatchVideos}/>
+            <NavigationDrawer
+                nowWatchVideos={nowWatchVideos}
+                onNowWatchCardDeleteClick={handleNowWatchCardDeleteClick}
+            />
             <div className="main">
                 <AppBar/>
                 <Switch>

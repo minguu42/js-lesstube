@@ -4,6 +4,7 @@ import './NavigationDrawer.css';
 
 const NavigationDrawer = (props) => {
     const nowWatchVideos = props.nowWatchVideos;
+    const onNowWatchCardDeleteClick = props.onNowWatchCardDeleteClick
     if (!nowWatchVideos.length) {
         return (
             <div className="navigation-drawer">
@@ -25,19 +26,21 @@ const NavigationDrawer = (props) => {
                 <h5 className="nd-header__text">今から見る</h5>
             </div>
             <div className="navigation-drawer__inner">
-                {console.log(nowWatchVideos)}
-                {console.log(nowWatchVideos[0])}
-                {nowWatchVideos.map((video) => {
+                {nowWatchVideos.map((video, index) => {
                     return (
                         <div className="nd-card">
                             <img
-                                 src={video.snippet.thumbnails.high.url}
-                                 alt={'thumbnail of ' + video.snippet.title}
-                                 width="240px"
-                                 height="136px"
+                                src={video.snippet.thumbnails.high.url}
+                                alt={'thumbnail of ' + video.snippet.title}
+                                width="240px"
+                                height="136px"
                             />
                             <p className="nd-card__heading">{video.snippet.title}</p>
-                            <button className="nd-card__button">削除</button>
+                            <button className="nd-card__button" onClick={() => {
+                                onNowWatchCardDeleteClick(index);
+                            }}>
+                                削除
+                            </button>
                         </div>
                     );
                 })}
