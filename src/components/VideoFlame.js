@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Redirect} from "react-router";
+import YouTube from "react-youtube";
 
 import './VideoFlame.css';
 
@@ -20,18 +21,16 @@ const VideoFlame = (props) => {
     }
 
     const nowVideo = nowVideos[0];
-    console.log(nowVideo);
+    const opts = {
+        width: '1120px',
+        height: '630px',
+        playerVars: {
+            autoplay: 1,
+        },
+    };
     return (
         <div className="video-flame__outer">
-            <iframe
-                title="video player"
-                width="1120px"
-                height="630px"
-                src="https://www.youtube.com/embed/MlPxDmG4VHE"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-            />
+            <YouTube videoId={nowVideo.id.videoId} opts={opts} onEnd={onEnd}/>
             <h2 className="video-flame__title">{nowVideo.snippet.title}</h2>
         </div>
     );
