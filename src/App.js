@@ -14,7 +14,7 @@ import './App.css';
 
 const App = () => {
     const [videos, setVideos] = useState([]);
-    // const [nowWatchVideos, setNowWatchVideos] = useState([]);
+    const [nowWatchVideos, setNowWatchVideos] = useState([]);
 
     useEffect(() => {
         fetchYouTubeVideos('ヒカキン').then((data) => {
@@ -30,7 +30,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <NavigationDrawer/>
+            <NavigationDrawer nowWatchVideos={nowWatchVideos}/>
             <div className="main">
                 <AppBar/>
                 <Switch>
