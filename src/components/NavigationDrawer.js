@@ -27,20 +27,20 @@ const NavigationDrawer = (props) => {
             <div className="navigation-drawer__inner">
                 {console.log(nowWatchVideos)}
                 {console.log(nowWatchVideos[0])}
-                {/*{nowWatchVideos.map((video) => {*/}
-                {/*    return (*/}
-                {/*        <div className="nd-card">*/}
-                {/*            <img*/}
-                {/*                 src={video.snippet.thumbnails.high.url}*/}
-                {/*                 alt={'thumbnail of ' + video.snippet.title}*/}
-                {/*                 width="240px"*/}
-                {/*                 height="136px"*/}
-                {/*            />*/}
-                {/*            <p className="nd-card__heading">{video.snippet.title}</p>*/}
-                {/*            <button className="nd-card__button">削除</button>*/}
-                {/*        </div>*/}
-                {/*    );*/}
-                {/*})}*/}
+                {nowWatchVideos.map((video) => {
+                    return (
+                        <div className="nd-card">
+                            <img
+                                 src={video.snippet.thumbnails.high.url}
+                                 alt={'thumbnail of ' + video.snippet.title}
+                                 width="240px"
+                                 height="136px"
+                            />
+                            <p className="nd-card__heading">{video.snippet.title}</p>
+                            <button className="nd-card__button">削除</button>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
