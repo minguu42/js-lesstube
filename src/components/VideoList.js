@@ -2,11 +2,7 @@ import './VideoList.css';
 
 const VideoList = (props) => {
     const videos = props.videos;
-
-    const handleClick = (event) => {
-        event.preventDefault();
-        props.onVideoCardClick(event.target.value);
-    };
+    const onVideoCardClick = props.onVideoCardClick;
 
     if (!videos.length) {
         return (
@@ -30,9 +26,9 @@ const VideoList = (props) => {
                         <p className="video-card__channel-title">{video.snippet.channelTitle}</p>
                         <button
                             className="video-card__button"
-                            onClick={handleClick}
-                            name="button"
-                            value={video}
+                            onClick={() => {
+                                onVideoCardClick(video);
+                            }}
                         >
                             今から見る
                         </button>

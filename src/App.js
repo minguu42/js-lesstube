@@ -28,11 +28,10 @@ const App = () => {
         });
     };
 
-    const addNowWatchVideos = (video) => {
+    const handleVideoCardClick = (video) => {
         const tmp = nowWatchVideos.slice();
         tmp.push(video);
         setNowWatchVideos(tmp);
-        console.log(nowWatchVideos);
     };
 
     return (
@@ -43,7 +42,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <SearchForm onFormSubmit={reloadVideos}/>
-                        <VideoList videos={videos} onVideoCardClick={addNowWatchVideos}/>
+                        <VideoList videos={videos} onVideoCardClick={handleVideoCardClick}/>
                     </Route>
                     <Route path="/watch">
                         <VideoFlame/>
