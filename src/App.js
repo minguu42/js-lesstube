@@ -28,6 +28,12 @@ const App = () => {
         });
     };
 
+    const removeNowWatchVideo = () => {
+        const tmp = nowWatchVideos.slice();
+        tmp.splice(0, 1);
+        setNowWatchVideos(tmp);
+    };
+
     const handleVideoCardClick = (video) => {
         const tmp = nowWatchVideos.slice();
         tmp.push(video);
@@ -54,7 +60,10 @@ const App = () => {
                         <VideoList videos={videos} onVideoCardClick={handleVideoCardClick}/>
                     </Route>
                     <Route path="/watch">
-                        <VideoFlame nowWatchVideos={nowWatchVideos}/>
+                        <VideoFlame
+                            nowWatchVideos={nowWatchVideos}
+                            removeNowWatchVideo={removeNowWatchVideo}
+                        />
                     </Route>
                     <Route path="/thank">
                         <ThankYouPage/>

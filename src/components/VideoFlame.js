@@ -6,21 +6,19 @@ import './VideoFlame.css';
 
 const VideoFlame = (props) => {
     const nowWatchVideos = props.nowWatchVideos;
-    const [nowVideos, setNowVideos] = useState(nowWatchVideos);
+    const removeNowWatchVideo = props.removeNowWatchVideo;
 
     const onEnd = () => {
-        const tmp = nowVideos.slice();
-        tmp.splice(0, 1);
-        setNowVideos(tmp);
+        removeNowWatchVideo();
     };
 
-    if (!nowVideos.length) {
+    if (!nowWatchVideos.length) {
         return (
             <Redirect to="/thank"/>
         );
     }
 
-    const nowVideo = nowVideos[0];
+    const nowVideo = nowWatchVideos[0];
     const opts = {
         width: '1120px',
         height: '630px',
