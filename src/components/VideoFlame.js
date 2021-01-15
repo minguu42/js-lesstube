@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import {Redirect} from "react-router";
 import YouTube from "react-youtube";
 
